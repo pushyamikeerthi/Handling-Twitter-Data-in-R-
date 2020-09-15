@@ -1,11 +1,4 @@
 #Set the working directory
-
-#First step in text mining is data aggregation
-#1) Typically this can be done using social media listening tools such as Radian6, Buzz Metrics etc
-#2) Accessing API - Application Programming Interfaces i.e. Twitter, Facebook, Google Analytics etc 
-#3) Web Crawling i.e. data from blogs, review forums etc
-
-###Examples around handling twitter data
 setwd("C:\\Users\\Keerthi\\Desktop\\Data Set")
 
 #Read the twitter data
@@ -25,13 +18,12 @@ tweets<-data.frame(obama$V2)
 #Renaming the column
 names(tweets)<-"Tweet_Text"
 
-str(tweets)
 
 #Data Pre-processing using tm package
 library(tm)
 
 #Building a Text Corpus
-#Source for the corpus
+#Source for the corpus - Vector
 
 tweets.corpus<-Corpus(VectorSource(tweets$Tweet_Text))
 summary(tweets.corpus)
