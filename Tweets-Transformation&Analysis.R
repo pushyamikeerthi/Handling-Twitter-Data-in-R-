@@ -93,16 +93,6 @@ library("RColorBrewer")
 
 #customizing wordcloud
 #Need to use text corpus and not term document matrix
-#How to choose colors?
-?brewer.pal
-
-display.brewer.all() #Gives you a chart
-brewer.pal #Helps you identify the groups of pallete colors
-display.brewer.pal(8,"Dark2")
-
-display.brewer.pal(8,"Purples")
-display.brewer.pal(3,"Oranges")
-
 pal2<-brewer.pal(8,"Dark2")
 #plot your word cloud
 wordcloud(tweets.corpus,min.freq=10,max.words=100,random.order=T,colors=pal2)
